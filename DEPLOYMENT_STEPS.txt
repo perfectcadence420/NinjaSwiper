@@ -1,0 +1,29 @@
+NinjaSwiper Vercel deployment steps
+
+1. Unzip this project.
+2. Upload it to GitHub, or deploy the folder with Vercel CLI.
+3. In Supabase SQL Editor, run database/ninjaswiper_supabase_setup.sql.
+4. In Supabase Authentication > URL Configuration:
+   Site URL: https://ninjaswiper.com
+   Redirect URLs:
+   - https://ninjaswiper.com/dashboard
+   - https://ninjaswiper.com/update-password
+   - https://ninjaswiper.com/login
+   - https://ninjaswiper.com/signup
+   - https://ninjaswiper.com/**
+5. In Vercel Project > Settings > Environment Variables, add all variables from .env.example with your real values.
+6. Deploy or redeploy the project.
+7. In Vercel Project > Settings > Domains, add ninjaswiper.com and www.ninjaswiper.com.
+8. In GoDaddy DNS, add the records Vercel asks for.
+9. In Stripe Dashboard > Developers > Webhooks, add:
+   https://ninjaswiper.com/api/stripe/webhook
+10. Select these Stripe events:
+   checkout.session.completed
+   customer.subscription.created
+   customer.subscription.updated
+   customer.subscription.deleted
+   invoice.paid
+   invoice.payment_failed
+11. Copy the Stripe webhook signing secret into Vercel as STRIPE_WEBHOOK_SECRET.
+12. In Stripe Dashboard, configure Customer Portal so unsubscribe works.
+13. Test signup, email confirmation, login, checkout, webhook, dashboard premium status, and unsubscribe.
