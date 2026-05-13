@@ -72,9 +72,9 @@ const featureCards = [
 ];
 
 const faqs = [
-  ["How does the free trial work?", "Every new account receives an API key with 200 included swipes. After that, the extension asks the user to upgrade."],
-  ["How does Premium unlock the extension?", "The website checks the user’s Stripe subscription and marks their API key as premium when payment is active."],
-  ["Will the extension need a new design?", "Only a small license/API key area needs to be added. The current controls can stay as they are."],
+  ["How does the free trial work?", "When you create a new account, 200 swipes are included for free. After that, the extension will ask you to upgrade."],
+  ["How does Premium unlock the extension?", "The website checks the user’s subscription and marks their API key as premium when payment is active."],
+  ["How do I connect the extension to my account?", "Create a NinjaSwiper account, copy your API key from the dashboard, and paste it into the extension. The extension uses that key to check your swipe allowance and Premium status."],
 ];
 
 const termsSections = [
