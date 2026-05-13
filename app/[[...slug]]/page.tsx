@@ -669,7 +669,7 @@ function SwipeDemo() {
             Time between swipes (ms):
           </label>
           <div className="rounded-lg border border-zinc-200 bg-zinc-50 px-4 py-3 text-base">
-            600
+            900
           </div>
         </div>
 
@@ -678,7 +678,7 @@ function SwipeDemo() {
             Right swipe percentage (%):
           </label>
           <div className="rounded-lg border border-zinc-200 bg-zinc-50 px-4 py-3 text-base">
-            80
+            94
           </div>
         </div>
 
@@ -715,7 +715,7 @@ function SwipeDemo() {
         </div>
 
         <div className="truncate rounded-lg border border-zinc-200 bg-zinc-50 px-4 py-3 text-sm font-semibold text-zinc-400">
-          Amsterdam, Athens, Bern, Birmingham
+          Krakow, Gdansk, Warsaw, Cluj, Buch...
         </div>
 
         <button className="h-14 w-full rounded-lg bg-[#ff2f5f] text-lg font-black text-white shadow-lg shadow-rose-300/60">
@@ -723,8 +723,16 @@ function SwipeDemo() {
         </button>
 
         <div className="text-center text-sm font-semibold text-[#ff5864]">
-          ▶️ Swiping...
+          💤 Taking break... 7s left
         </div>
+
+       <div className="flex justify-center pt-2">
+  <div className="flex h-20 w-20 items-center justify-center rounded-3xl bg-rose-50 shadow-inner shadow-rose-100">
+    <div className="h-14 w-14">
+      <LogoMark />
+    </div>
+  </div>
+</div>
       </div>
     </motion.div>
   );
