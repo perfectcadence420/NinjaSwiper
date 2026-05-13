@@ -657,24 +657,101 @@ function UpdatePasswordLayout({ onNavigate }: { onNavigate: (route: RouteName) =
 
 function SwipeDemo() {
   return (
-    <div className="relative mx-auto w-full max-w-[390px]">
-      <div className="absolute -left-8 -top-8 h-32 w-32 rounded-full bg-rose-200/50 blur-3xl" />
-      <div className="absolute -bottom-8 -right-8 h-32 w-32 rounded-full bg-zinc-300/60 blur-3xl" />
-      <motion.div initial={{ opacity: 0, y: 18, scale: 0.98 }} animate={{ opacity: 1, y: 0, scale: 1 }} transition={{ duration: 0.45 }} className="relative rounded-[2rem] border-2 border-rose-200 bg-white p-5 shadow-2xl shadow-rose-200/45">
-        <div className="space-y-5">
-          <div><label className="mb-2 block text-[15px] font-semibold text-zinc-700">Time between swipes (ms):</label><div className="rounded-2xl border border-zinc-300 bg-zinc-50 px-4 py-3 text-2xl font-medium text-zinc-900">900</div></div>
-          <div><label className="mb-2 block text-[15px] font-semibold text-zinc-700">Right swipe percentage (%):</label><div className="rounded-2xl border border-zinc-300 bg-zinc-50 px-4 py-3 text-2xl font-medium text-zinc-900">94</div></div>
-          <div><label className="mb-2 block text-[15px] font-semibold text-zinc-700">API key:</label><div className="truncate rounded-2xl border border-zinc-300 bg-zinc-100 px-4 py-3 text-lg font-medium text-zinc-400">ns_a275addf4b59fba64b7c5d755052</div></div>
-          <div className="flex items-center gap-2 text-[15px] font-bold text-green-600"><span className="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-sm border border-green-700 bg-green-500 text-xs text-white">✓</span><span>Premium key active — unlimited swipes.</span></div>
-          <div className="flex items-center gap-3"><span className="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-sm bg-zinc-200 text-xs text-white">✓</span><span className="text-[15px] font-semibold text-zinc-700">Take breaks</span><div className="ml-auto flex items-center gap-3"><div className="relative h-2 w-24 rounded-full bg-zinc-200"><div className="absolute left-[72%] top-1/2 h-5 w-5 -translate-y-1/2 rounded-full bg-zinc-300 shadow" /></div><span className="text-lg font-bold text-rose-500">10%</span></div></div>
-          <div className="flex items-center gap-3"><span className="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-sm bg-zinc-200 text-xs text-white">✓</span><span className="text-[15px] font-semibold text-zinc-700">Change 📍 when out of profiles</span></div>
-          <div className="truncate rounded-2xl border border-zinc-300 bg-zinc-100 px-4 py-3 text-lg font-medium text-zinc-400">Krakow, Gdansk, Warsaw, Cluj, Buch...</div>
-          <button type="button" className="mt-2 w-full rounded-2xl bg-gradient-to-r from-rose-400 to-[#ff2f5b] px-6 py-4 text-2xl font-black text-white shadow-lg shadow-rose-300/50">Stop Swiping</button>
-          <div className="pt-1 text-center text-xl font-medium text-rose-400">💤 Taking break... 7s left</div>
-          <div className="grid grid-cols-[44px_1fr_1fr_70px] items-center gap-y-4 pt-3"><div /><div className="text-center text-[15px] font-black text-zinc-800">Session</div><div className="text-center text-[15px] font-black text-zinc-800">Total</div><div /><div className="flex items-center justify-center text-3xl text-rose-500">❤️</div><div className="text-center text-2xl font-medium text-zinc-800">108</div><div className="text-center text-2xl font-medium text-zinc-800">180</div><div className="row-span-2 flex items-center justify-center"><img src="/icon.png" alt="NinjaSwiper logo" className="h-16 w-16 object-contain" /></div><div className="flex items-center justify-center text-3xl text-orange-600">❌</div><div className="text-center text-2xl font-medium text-zinc-800">3</div><div className="text-center text-2xl font-medium text-zinc-800">11</div></div>
+    <motion.div
+      initial={{ opacity: 0, y: 24 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.55 }}
+      className="mx-auto w-full max-w-[360px] rounded-[2rem] border border-rose-100 bg-white/90 p-4 shadow-2xl shadow-rose-200/60 sm:max-w-[420px] sm:p-6"
+    >
+      <div className="space-y-3">
+        <div>
+          <label className="mb-1 block text-xs font-black uppercase tracking-[0.18em] text-zinc-400">
+            Time between swipes
+          </label>
+          <div className="rounded-2xl border border-rose-100 bg-rose-50/60 px-4 py-3 text-right text-lg font-black text-zinc-900">
+            900 ms
+          </div>
         </div>
-      </motion.div>
-    </div>
+
+        <div>
+          <label className="mb-1 block text-xs font-black uppercase tracking-[0.18em] text-zinc-400">
+            Right swipe %
+          </label>
+          <div className="rounded-2xl border border-rose-100 bg-rose-50/60 px-4 py-3 text-right text-lg font-black text-zinc-900">
+            94%
+          </div>
+        </div>
+
+        <div>
+          <label className="mb-1 block text-xs font-black uppercase tracking-[0.18em] text-zinc-400">
+            API key
+          </label>
+          <div className="truncate rounded-2xl border border-rose-100 bg-rose-50/60 px-4 py-3 text-sm font-bold text-zinc-500">
+            ns_a275addf4b59fba64b7c5d755052
+          </div>
+        </div>
+
+        <div className="rounded-2xl border border-emerald-100 bg-emerald-50 px-4 py-3 text-sm font-black text-emerald-700">
+          ✓ Premium key active — unlimited swipes.
+        </div>
+
+        <div className="grid grid-cols-2 gap-3 text-sm font-bold text-zinc-700">
+          <div className="rounded-2xl border border-rose-100 bg-white px-3 py-3">
+            ✓ Take breaks
+            <div className="mt-1 text-lg font-black text-[#ff5864]">10%</div>
+          </div>
+
+          <div className="rounded-2xl border border-rose-100 bg-white px-3 py-3">
+            ✓ Change city
+            <div className="mt-1 truncate text-xs font-bold text-zinc-400">
+              Krakow, Gdansk, Warsaw...
+            </div>
+          </div>
+        </div>
+
+        <button className="h-14 w-full rounded-[1.5rem] bg-[#ff5864] text-xl font-black text-white shadow-lg shadow-rose-300/50">
+          Stop Swiping
+        </button>
+
+        <div className="rounded-2xl bg-rose-50 px-4 py-3 text-center text-base font-black text-[#ff5864]">
+          zzz Taking break... 7s left
+        </div>
+
+        <div className="rounded-[1.5rem] border border-rose-100 bg-white p-4">
+          <div className="mb-4 grid grid-cols-2 gap-3 text-center">
+            <div>
+              <div className="text-xs font-black uppercase tracking-[0.18em] text-zinc-400">
+                Session
+              </div>
+              <div className="mt-2 text-2xl font-black text-zinc-900">108</div>
+            </div>
+
+            <div>
+              <div className="text-xs font-black uppercase tracking-[0.18em] text-zinc-400">
+                Total
+              </div>
+              <div className="mt-2 text-2xl font-black text-zinc-900">180</div>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-3 items-center gap-3 text-center">
+            <div>
+              <div className="text-3xl">❤️</div>
+              <div className="mt-1 text-xl font-black text-zinc-900">108</div>
+            </div>
+
+            <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-rose-50">
+              <LogoMark />
+            </div>
+
+            <div>
+              <div className="text-3xl">❌</div>
+              <div className="mt-1 text-xl font-black text-zinc-900">3</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </motion.div>
   );
 }
 
