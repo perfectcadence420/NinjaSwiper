@@ -661,94 +661,85 @@ function SwipeDemo() {
       initial={{ opacity: 0, y: 24 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.55 }}
-      className="mx-auto w-full max-w-[360px] rounded-[2rem] border border-rose-100 bg-white/90 p-4 shadow-2xl shadow-rose-200/60 sm:max-w-[420px] sm:p-6"
+      className="mx-auto w-full max-w-[360px] rounded-[1.75rem] border border-rose-100 bg-white p-5 shadow-2xl shadow-rose-200/50 sm:max-w-[390px]"
     >
-      <div className="space-y-3">
+      <div className="space-y-4 text-zinc-900">
         <div>
-          <label className="mb-1 block text-xs font-black uppercase tracking-[0.18em] text-zinc-400">
-            Time between swipes
-          </label>
-          <div className="rounded-2xl border border-rose-100 bg-rose-50/60 px-4 py-3 text-right text-lg font-black text-zinc-900">
-            900 ms
+          <label className="mb-2 block text-sm font-semibold">Time between swipes (ms):</label>
+          <div className="rounded-lg border border-zinc-200 bg-zinc-50 px-4 py-3 text-base">
+            600
           </div>
         </div>
 
         <div>
-          <label className="mb-1 block text-xs font-black uppercase tracking-[0.18em] text-zinc-400">
-            Right swipe %
-          </label>
-          <div className="rounded-2xl border border-rose-100 bg-rose-50/60 px-4 py-3 text-right text-lg font-black text-zinc-900">
-            94%
+          <label className="mb-2 block text-sm font-semibold">Right swipe percentage (%):</label>
+          <div className="rounded-lg border border-zinc-200 bg-zinc-50 px-4 py-3 text-base">
+            80
           </div>
         </div>
 
         <div>
-          <label className="mb-1 block text-xs font-black uppercase tracking-[0.18em] text-zinc-400">
-            API key
-          </label>
-          <div className="truncate rounded-2xl border border-rose-100 bg-rose-50/60 px-4 py-3 text-sm font-bold text-zinc-500">
+          <label className="mb-2 block text-sm font-semibold">API key:</label>
+          <div className="truncate rounded-lg border border-zinc-200 bg-zinc-100 px-4 py-3 text-sm font-semibold text-zinc-400">
             ns_a275addf4b59fba64b7c5d755052
           </div>
         </div>
 
-        <div className="rounded-2xl border border-emerald-100 bg-emerald-50 px-4 py-3 text-sm font-black text-emerald-700">
-          ✓ Premium key active — unlimited swipes.
+        <div className="flex items-center gap-2 text-sm font-black text-green-600">
+          <span className="flex h-4 w-4 items-center justify-center rounded-sm bg-green-500 text-xs text-white">
+            ✓
+          </span>
+          <span>Premium key active — unlimited swipes.</span>
         </div>
 
-        <div className="grid grid-cols-2 gap-3 text-sm font-bold text-zinc-700">
-          <div className="rounded-2xl border border-rose-100 bg-white px-3 py-3">
-            ✓ Take breaks
-            <div className="mt-1 text-lg font-black text-[#ff5864]">10%</div>
+        <div className="flex items-center gap-3 text-sm font-semibold">
+          <span className="flex h-4 w-4 items-center justify-center rounded-sm bg-zinc-300 text-xs text-white">
+            ✓
+          </span>
+          <span className="shrink-0">Take breaks</span>
+          <div className="h-1 flex-1 rounded-full bg-zinc-200">
+            <div className="ml-[70%] h-4 w-4 -translate-y-1.5 rounded-full bg-zinc-300" />
           </div>
-
-          <div className="rounded-2xl border border-rose-100 bg-white px-3 py-3">
-            ✓ Change city
-            <div className="mt-1 truncate text-xs font-bold text-zinc-400">
-              Krakow, Gdansk, Warsaw...
-            </div>
-          </div>
+          <span className="font-black text-[#ff5864]">10%</span>
         </div>
 
-        <button className="h-14 w-full rounded-[1.5rem] bg-[#ff5864] text-xl font-black text-white shadow-lg shadow-rose-300/50">
+        <div className="flex items-center gap-2 text-sm font-semibold">
+          <span className="flex h-4 w-4 items-center justify-center rounded-sm bg-zinc-300 text-xs text-white">
+            ✓
+          </span>
+          <span>Change 📍 when out of profiles</span>
+        </div>
+
+        <div className="truncate rounded-lg border border-zinc-200 bg-zinc-50 px-4 py-3 text-sm font-semibold text-zinc-400">
+          Amsterdam, Athens, Bern, Birmingham
+        </div>
+
+        <button className="h-14 w-full rounded-lg bg-[#ff2f5f] text-lg font-black text-white shadow-lg shadow-rose-300/60">
           Stop Swiping
         </button>
 
-        <div className="rounded-2xl bg-rose-50 px-4 py-3 text-center text-base font-black text-[#ff5864]">
-          zzz Taking break... 7s left
+        <div className="text-center text-sm font-semibold text-[#ff5864]">
+          ▶️ Swiping...
         </div>
 
-        <div className="rounded-[1.5rem] border border-rose-100 bg-white p-4">
-          <div className="mb-4 grid grid-cols-2 gap-3 text-center">
-            <div>
-              <div className="text-xs font-black uppercase tracking-[0.18em] text-zinc-400">
-                Session
-              </div>
-              <div className="mt-2 text-2xl font-black text-zinc-900">108</div>
-            </div>
+        <div className="grid grid-cols-[44px_1fr_1fr_64px] items-center gap-x-3 gap-y-2 pt-3 text-center">
+          <div />
+          <div className="text-sm font-black">Session</div>
+          <div className="text-sm font-black">Total</div>
+          <div />
 
-            <div>
-              <div className="text-xs font-black uppercase tracking-[0.18em] text-zinc-400">
-                Total
-              </div>
-              <div className="mt-2 text-2xl font-black text-zinc-900">180</div>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-3 items-center gap-3 text-center">
-            <div>
-              <div className="text-3xl">❤️</div>
-              <div className="mt-1 text-xl font-black text-zinc-900">108</div>
-            </div>
-
-            <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-rose-50">
+          <div className="text-2xl leading-none">❤️</div>
+          <div className="text-base">258</div>
+          <div className="text-base">312</div>
+          <div className="row-span-2 flex items-center justify-center">
+            <div className="h-14 w-14">
               <LogoMark />
             </div>
-
-            <div>
-              <div className="text-3xl">❌</div>
-              <div className="mt-1 text-xl font-black text-zinc-900">3</div>
-            </div>
           </div>
+
+          <div className="text-2xl leading-none">❌</div>
+          <div className="text-base">68</div>
+          <div className="text-base">79</div>
         </div>
       </div>
     </motion.div>
