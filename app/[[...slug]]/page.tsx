@@ -665,14 +665,18 @@ function SwipeDemo() {
     >
       <div className="space-y-4 text-zinc-900">
         <div>
-          <label className="mb-2 block text-sm font-semibold">Time between swipes (ms):</label>
+          <label className="mb-2 block text-sm font-semibold">
+            Time between swipes (ms):
+          </label>
           <div className="rounded-lg border border-zinc-200 bg-zinc-50 px-4 py-3 text-base">
             600
           </div>
         </div>
 
         <div>
-          <label className="mb-2 block text-sm font-semibold">Right swipe percentage (%):</label>
+          <label className="mb-2 block text-sm font-semibold">
+            Right swipe percentage (%):
+          </label>
           <div className="rounded-lg border border-zinc-200 bg-zinc-50 px-4 py-3 text-base">
             80
           </div>
@@ -720,26 +724,6 @@ function SwipeDemo() {
 
         <div className="text-center text-sm font-semibold text-[#ff5864]">
           ▶️ Swiping...
-        </div>
-
-        <div className="grid grid-cols-[44px_1fr_1fr_64px] items-center gap-x-3 gap-y-2 pt-3 text-center">
-          <div />
-          <div className="text-sm font-black">Session</div>
-          <div className="text-sm font-black">Total</div>
-          <div />
-
-          <div className="text-2xl leading-none">❤️</div>
-          <div className="text-base">258</div>
-          <div className="text-base">312</div>
-          <div className="row-span-2 flex items-center justify-center">
-            <div className="h-14 w-14">
-              <LogoMark />
-            </div>
-          </div>
-
-          <div className="text-2xl leading-none">❌</div>
-          <div className="text-base">68</div>
-          <div className="text-base">79</div>
         </div>
       </div>
     </motion.div>
