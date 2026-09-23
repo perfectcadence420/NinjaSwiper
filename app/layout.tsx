@@ -5,7 +5,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "NinjaSwiper",
   description:
-    "Smart Tinder automation with API-key access, trial swipes, and Premium subscription support.",
+    "Set your Tinder swipe timing, Like percentage, breaks, and Passport cities. Try NinjaSwiper free for 200 swipes, then upgrade for unlimited use.",
   icons: {
     icon: [
       {
